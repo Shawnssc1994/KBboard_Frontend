@@ -20,7 +20,10 @@
 	},
 	"plugins": ["react", "jest"],
 	"rules": {
-		"no-underscore-dangle": 0,
+		"no-underscore-dangle": [
+			"error",
+			{ "allowAfterThisConstructor": true }
+		],
 		"import/extensions": ["error", "ignorePackages"],
 		"semi": ["error", "always"],
 		"linebreak-style": ["error", "unix"],
