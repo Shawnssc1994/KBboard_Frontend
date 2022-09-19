@@ -31,7 +31,7 @@
 		"quotes": ["error", "single"],
 		"no-tabs": 0,
 		"no-console": 1,
-		"no-shadow": "off",
+		"no-shadow": "error",
 		"no-use-before-define": [
 			"error",
 			{
