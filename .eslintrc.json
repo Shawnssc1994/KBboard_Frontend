@@ -43,7 +43,7 @@
 		],
 		"no-param-reassign": ["error", { "props": false }],
 		"sort-keys": "error",
-		"no-unused-vars": "error",
+		"no-unused-vars": ["error", { "varsIgnorePattern": "[iI]gnored" }],
 		"no-var": "error",
 		"eqeqeq": ["error", "always"],
 		"no-empty-function": ["error", { "allow": ["methods"] }],
