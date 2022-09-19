@@ -21,10 +21,7 @@
 	},
 	"plugins": ["react", "jest", "jsx-a11y"],
 	"rules": {
-		"no-underscore-dangle": [
-			"error",
-			{ "allowAfterThisConstructor": true }
-		],
+		"no-underscore-dangle": ["error", { "allowAfterThisConstructor": true }],
 		"import/extensions": ["error", "ignorePackages"],
 		"semi": ["error", "always"],
 		"linebreak-style": ["error", "unix"],
@@ -49,6 +46,6 @@
 		"no-empty-function": ["error", { "allow": ["methods"] }],
 		"no-else-return": ["error", { "allowElseIf": true }],
 		"no-nested-ternary": "error",
-		"jsx-a11y/rule-name": 2
+		"jsx-a11y/rule-name": 0
 	}
 }
