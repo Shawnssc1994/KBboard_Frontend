@@ -8,7 +8,8 @@
 		"plugin:react/recommended",
 		"airbnb",
 		"prettier",
-		"plugin:jest/recommended"
+		"plugin:jest/recommended",
+		"plugin:jsx-a11y/recommended"
 	],
 	"overrides": [],
 	"parserOptions": {
@@ -18,7 +19,7 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["react", "jest"],
+	"plugins": ["react", "jest", "jsx-a11y"],
 	"rules": {
 		"no-underscore-dangle": [
 			"error",
@@ -47,6 +48,7 @@
 		"eqeqeq": ["error", "always"],
 		"no-empty-function": ["error", { "allow": ["methods"] }],
 		"no-else-return": ["error", { "allowElseIf": true }],
-		"no-nested-ternary": "error"
+		"no-nested-ternary": "error",
+		"jsx-a11y/rule-name": 2
 	}
 }
