@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			// Aliases for the folders we want to use
+			"@/*": ["./src/*"],
+			"@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+		}
+	},
+	"exclude": ["node_modules"]
+}
