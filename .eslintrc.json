@@ -46,6 +46,13 @@
 		"no-empty-function": ["error", { "allow": ["methods"] }],
 		"no-else-return": ["error", { "allowElseIf": true }],
 		"no-nested-ternary": "error",
-		"jsx-a11y/rule-name": 0
+		"jsx-a11y/rule-name": 0,
+		"react/require-default-props": "off",
+		"react/prop-types": "off",
+		"no-restricted-exports": "off",
+		"react/react-in-jsx-scope": "off",
+		"import/no-undesolved": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
 	}
 }
