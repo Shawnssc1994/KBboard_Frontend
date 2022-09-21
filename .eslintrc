@@ -5,8 +5,9 @@
 		"jest/globals": true
 	},
 	"extends": [
-		"plugin:react/recommended",
 		"airbnb",
+		"eslint:recommended",
+		"plugin:react/recommended",
 		"prettier",
 		"plugin:jest/recommended",
 		"plugin:jsx-a11y/recommended"
@@ -19,15 +20,14 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["react", "jest", "jsx-a11y"],
+	"plugins": ["react", "jest", "jsx-a11y", "better-styled-components", "prettier"],
 	"rules": {
 		"no-underscore-dangle": ["error", { "allowAfterThisConstructor": true }],
 		"import/extensions": ["error", "ignorePackages"],
 		"semi": ["error", "always"],
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "single"],
-		"no-tabs": 0,
-		"no-console": 1,
+		"no-console": "warn",
 		"no-shadow": "error",
 		"no-use-before-define": [
 			"error",
@@ -51,8 +51,9 @@
 		"react/prop-types": "off",
 		"no-restricted-exports": "off",
 		"react/react-in-jsx-scope": "off",
-		"import/no-undesolved": "off",
 		"react/jsx-props-no-spreading": "off",
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"better-styled-components/sort-declarations-alphabetically": "warn",
+		"sort-imports": ["error", { "ignoreDeclarationSort": true }]
 	}
 }
