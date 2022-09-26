@@ -10,8 +10,20 @@
 		"plugin:react/recommended",
 		"prettier",
 		"plugin:jest/recommended",
-		"plugin:jsx-a11y/recommended"
+		"plugin:jsx-a11y/recommended",
+		"plugin:import/react"
 	],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		},
+		"alias": {
+			"map": [["@/", "./src"]],
+			"extensions": [".js", ".jsx"]
+		}
+	},
 	"overrides": [],
 	"parserOptions": {
 		"ecmaFeatures": {
@@ -20,10 +32,11 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["react", "jest", "jsx-a11y", "better-styled-components", "prettier"],
+	"plugins": ["import", "react", "jest", "jsx-a11y", "better-styled-components", "prettier"],
 	"rules": {
 		"no-underscore-dangle": ["error", { "allowAfterThisConstructor": true }],
-		"import/extensions": ["error", "ignorePackages"],
+		"import/no-unresolved": "off",
+		"import/extensions": "off",
 		"semi": ["error", "always"],
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "single"],
