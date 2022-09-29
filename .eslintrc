@@ -11,7 +11,8 @@
 		"prettier",
 		"plugin:jest/recommended",
 		"plugin:jsx-a11y/recommended",
-		"plugin:import/react"
+		"plugin:import/react",
+		"plugin:json/recommended"
 	],
 	"settings": {
 		"import/extensions": [".js", ".jsx"],
