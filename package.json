@@ -26,10 +26,12 @@
 		"start": "cross-env PORT=8000 craco start",
 		"build": "craco build",
 		"eject": "craco eject",
-		"lint": "npx eslint src",
-		"lint:fix": "npx eslint src --fix",
-		"lint:create": "npx eslint --init",
-		"format": "prettier . --write",
+		"lint:create": "eslint --init",
+		"lint": "eslint src --cache",
+		"lint:fix": "eslint src --fix",
+		"lint:css": "stylelint './src/**/*.{js,jsx}'",
+		"prettier": "prettier . --check",
+		"prettier:fix": "npm run prettier . --write",
 		"prepare": "husky install",
 		"test": "craco test",
 		"coverage": "jest --coverage"
@@ -67,6 +69,7 @@
 		"eslint-plugin-better-styled-components": "^1.1.2",
 		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-jest": "^27.0.4",
+		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-jsx-a11y": "^6.6.1",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.31.8",
@@ -75,10 +78,25 @@
 		"jest": "^27.5.1",
 		"jest-environment-jsdom": "^29.0.3",
 		"lint-staged": "^13.0.3",
-		"prettier": "2.7.1"
+		"postcss-scss": "^4.0.5",
+		"prettier": "2.7.1",
+		"stylelint": "^14.13.0",
+		"stylelint-config-recommended": "^9.0.0",
+		"stylelint-config-styled-components": "^0.1.1",
+		"stylelint-processor-styled-components": "^1.10.0"
 	},
 	"lint-staged": {
-		"*.{js,jsx}": "npm run lint",
-		"*.{js,css,md,html,json,jsx}": "npm run format"
+		"*.{js,jsx,json}": [
+			"npx eslint --cache",
+			"git add"
+		],
+		"*.{js,jsx}": [
+			"npx stylelint",
+			"git add"
+		],
+		"*.{js,css,md,html,json,jsx}": [
+			"prettier . --check",
+			"git add"
+		]
 	}
 }
